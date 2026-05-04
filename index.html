@@ -418,7 +418,8 @@
     return s==='Terkirim' ? makeBadge('terkirim','Terkirim') : makeBadge('belum','Belum Terkirim');
   }
   function getStatus(id) {
-    return document.getElementById(id).value.replace(/^[^\s]+\s/,'');
+    // value attribute sudah bersih tanpa emoji, langsung return
+    return document.getElementById(id).value;
   }
 
   // ===== SURAT MASUK =====
